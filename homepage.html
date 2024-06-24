@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOG HUT</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        text-decoration: none;
+    }
+    
+    .nav a{
+        display: inline-block;
+        padding: 20px 3px;
+        text-align: center;
+        color:navy;
+        background-color: white;
+        text-decoration: none;
+    }
+    .logo img{
+        width: 200px;
+        height: 60px;
+        margin-top: 10px;
+        margin-left: 10%;
+    }
+    .img-fluid{
+        margin: 0;
+        padding: 0;
+        height:70px;
+        width: 150px;
+        padding-top: 1px;
+        display: inline-block;
+    }
+    .nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 0;
+        padding: 0;
+        overflow: hidden;
+        width: 100%;
+    }
+    .nav li{
+        display: inline-block;
+        font-size: 15px;
+        padding: 10px;
+    }
+    li .btn1{
+        background-color: tomato;
+        border: 0;
+        height: 50px;
+        width: 120px;
+        color: white;
+        cursor: pointer;
+    }
+    .navbar{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 80px;
+    }
+    .navitems{
+        margin-left: 100px;
+        width: 100%;
+        margin-top: 10px;
+        margin-right: 2%;
+    }
+    /* For Image Block */
+    .imgblock{
+        height: 50%;
+        width: 100%;
+    }
+    /* For The Image */
+    .imgGal{
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;        
+    }
+    .img1{
+        margin: auto;
+        margin-top: 30px;
+        align-items: center;
+    }
+    .imgblk1{
+        height: 210px;
+        width: 350px;
+    }
+    .ptag1{
+        margin-top: 10px;
+        font-size: 13px;
+    }
+    /* for hr line */
+    .hr_first{
+        margin: 50px;
+        margin-top: 100px;
+        color: gray;
+    }
+    .projectGal{
+        margin-top: 100px;
+        margin-bottom: 30px;
+        font-size: 20px;
+        color: rgba(4, 33, 178, 0.977);
+    }
+    .proGal{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        /* margin-left: 2%;
+        margin-right: 2%; */
+        /* padding-left: %; */
+        /* padding-right: 6%; */
+    }
+    .src1{
+        margin-top: 10px;
+        margin-left: 20px;
+        align-items: center;
+    }
+    .pro1{
+        height: 300px;
+        width: 320px;
+    }
+    /* HOME LOAN */
+    .homeloan{
+        margin-top: 100px;
+        margin-bottom: 20px;
+        font-size: 40px;
+        color: rgba(4, 33, 178, 0.977);
+    }
+    .myloan{
+        margin-bottom: 40px;
+    }
+    .myloanpanel{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 70px;
+        padding: 20px;
+    }
+    .myloanpanel img{
+        padding: 10px;
+        margin: 20px;
+        box-shadow: 0px 0px 20px 5px rgb(188, 186, 186);
+        height: 140px;
+        width: 170px;
+
+    }
+    .bankimg{
+        padding-left: 30px;
+    }
+    /* SITE VISIT */
+    .sitevisit{
+        background-color: rgb(86, 58, 118);
+        padding: 40px;
+        width: 100%;
+    }
+    .visittext{
+        margin: 50px;
+        padding: 40px;
+        color: whitesmoke;
+        font-size: 30px;
+    }
+    .siteform{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+    .siteform input[type=text],input[type=email]{
+        height: 60px;
+        width: 300px;
+        margin-right: 20px;
+        padding-right: 50px;
+        padding-left: 40px;
+    }
+    .siteform input[type=text]:focus{
+        border: 6px solid blue; 
+    }
+    .siteform input[type=email]:focus{
+        border: 6px solid blue; 
+    }
+    .btnsite{
+        padding: 20px;
+        height: 65px;
+        width: 300px;
+        color: whitesmoke;
+        font-size: 17px;
+        background-color: tomato;
+        cursor: pointer;
+    }
+    .btnsite:hover{
+        color: rgba(4, 33, 178, 0.977)
+    }
+    /* WHY LOG HUT */
+    .whyus{
+        background-color: rgb(205, 203, 218);
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .usonly{
+        margin-left: 40%;
+        color: rgb(39, 39, 143);
+    }
+    .whyhut{
+        font-size: 35px;
+    }
+    .whylog{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 30px;
+    }
+    .whylog img{
+        margin-left: 80px;
+        margin-right: 0px;
+        padding-right: 50px;
+        height: 150px;
+        width: 500px;
+    }
+    /* My plan */
+    .myplans{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: auto;
+        padding: 50px;
+    }
+    .planpic{
+        margin-left: 50px;
+    }
+    .projectover h2{
+        color: rgba(4, 33, 178, 0.977);
+        font-size: 30px;
+        padding-bottom: 20px;
+    }
+    .projectover{
+        margin-left: 30px;
+    }
+    .projectover .p1{
+        padding-bottom: 15px;
+    }
+    .projectover .p2{
+        padding-bottom: 15px;
+    }
+    .projectover .p3{
+        padding-bottom: 15px;
+    }
+    .projectover .p4{
+        padding-bottom: 15px;
+    }
+    .projectover .btnplan{
+        padding: 10px;
+        height: 50px;
+        width: 150px;
+        color: whitesmoke;
+        font-size: 15px;
+        background-color: tomato;
+        cursor: pointer;
+    }
+    /* MORE THAN JUST A PLOT */
+    .aboutlog{
+        margin-top:30px;
+        display: flex;
+        gap:2px;
+        background-color: rgb(237, 240, 238);
+    }
+    .forsecurity{
+        width: 33%;
+        padding: 100px;
+    }
+    .for1rowcol{
+        display: flex;
+        gap: 15px;
+        margin-top: 40px;
+    }
+    .forimage{
+        width: 25%;
+    }
+    .forimage img{
+        width: 100%;
+    }
+    .middleimg{
+        width: 100%;
+    }
+    .forcontent{
+        width: 75%;
+        font-weight: bold;
+        margin-top: 40px;
+        font-size: 17px;
+    }
+    /* PBRERA-SAS81-PR0693 */
+    .pbrerarow{
+        width: 100%;
+        background-color: white;
+    }
+    .pbrera1row{
+        width: 1170px;
+        margin: auto;
+    }
+    .pbrowmain{
+        font-weight: bold;
+        text-align: center;
+        margin-top: 25px;
+    }
+    hr{
+        margin: 35px 0px;
+    }
+    .pbreraText1{
+        margin-top: 25px;
+        font-family: sans-serif;
+        font-size: 18px;
+        line-height: 18px;
+    }
+    .pbreraplotno{
+        text-align: left;
+        font-weight: bold;
+        font-size: 20px;
+        margin-top: 40px;
+    }
+    .pbreraImages{
+        display: flex;
+        margin-top: 25px;
+        gap: 100px;
+    }
+    .pbrera1img{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0px 0px 10px 3px #ccc;
+        width: 100%;
+        flex-wrap: wrap;
+        display: block;
+    }
+    .reraimg1{
+        margin-top: 10px;
+        font-weight: bold;
+    }
+    .pbreraText{
+        margin-top: 10px;
+        font-weight: bold;
+    }
+    .reraimg1 img{
+        width: 50%;
+        margin-top: 20px;
+    }
+    /* LOG HUT PLOTS NEAR AERO CITY MOHALI– LANDRAN-BANUR ROAD */
+    .hr1{
+        margin-top: 80px;
+    }
+    .maintable{
+        margin: auto;
+        width: 800px;
+    }
+    .secondrow{
+        width: 100%;
+        color: white;
+        line-height: 25px;
+        text-align: center;
+        padding-top: 25px;
+        background-color: #501487;
+    }
+    .tablefirstrow{
+
+    }
+    .tablesecondrow{
+        display: flex;
+        gap: 2px;
+        color: white;
+        padding-top: 50px;
+        background-color: #501487;
+    }
+    .plotsizeprice{
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+    .forplotsize{
+        display: flex;
+        gap: 2px;
+        margin-top: 0px;
+        background-color: white;
+        border: 1px solid black;
+    }
+    .plotsizeprice img{
+        width: 40%;
+    }
+    /* IMAGE AFTER TABLE */
+    .imgAfterTable{
+        width: 800px;
+        margin: auto;
+    }
+    .imgAfterTable img{
+        width: 800px;
+        margin-top: 10px;
+    }
+    .mainExperience{
+        width: 100%;
+    }
+    .experienceTitle{
+        color: #141264;
+        text-align: center;
+        font-size: 25px;
+        font-weight: bold;
+        padding-top: 65px;
+    }
+    .experienceText{
+        text-align: center;
+        margin-top: 10px;
+        font-size: 15px;
+    }
+    .experienceTitle1{
+        color: #141264;
+        text-align: center;
+        margin-top: 100px;
+        font-size: 25px;
+        font-weight: bold;
+    }
+    .experienceText img{
+        width: 100%;
+    }
+    /* LAYOUT PLAN */
+    .mainclassLayout{
+        text-align: center;
+    }
+    .downloadBrochure{
+        color: white;
+        background-color: #f60;
+        font-size: 15px;
+        font-weight: bold;
+        height: 50px;
+        border: 0px;
+        width: 25%;
+        border-radius: 15px;
+        margin-top: 70px;
+    }
+    .downloadBrochure:hover{
+        cursor: pointer;
+        box-shadow: 0px 10px 17px 0px gray;
+    }
+    .mainclassLayout img{
+        width: 80%;
+    }
+    /* IMPORTANT LANDMARKS */
+    .landmarks{
+        width: 1170px;
+        margin: auto;
+    }
+    .marquee_main{
+        width: 1170px;
+        margin: auto;
+    }
+    .marquee_row{
+        border-bottom: 1px rgb(151,149,149) solid;
+        display:flex;
+        gap: 1px;
+        align-items: center;
+        padding: 10px;
+        display-content: space-between;
+    }
+    .marquee_col1 img{
+        height: 30px;
+        width: 30px;
+        padding-left: 1000px;
+    }
+    .marquee_col2 img{
+        height: 30px;
+        width: 30px;
+        padding-left: 1050px;
+    }
+    .marquee_col3 img{
+        height: 30px;
+        width: 30px;
+        padding-left: 1030px;
+    }
+    .mainAminites{
+        width: 1170px;
+        margin: auto;
+    }
+    .aminitesTable{
+        display: flex;
+        gap: 5px;
+    }
+    .aminitesDrive{
+        width: 200px;
+        margin: 20px;
+        text-align: center;
+    }
+    .aminitesDrive img{
+        width: 80px;
+    }
+    .faqs{
+        width: 1170px;
+        margin: auto;
+    }
+    .mainFaqs{
+        border: 1px rgb(180, 179, 179) solid;
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 30px;
+        align-items: center;
+    }
+    .mainFaqs img{
+        height: 30px;
+        width: 25px;
+        padding-left: 1090px;
+    }
+    .mainSchedule{
+        background-color: #f3f3f3;
+        width: 100%;
+    }
+    .Schedulerow1{
+        width: 1170px;
+        margin: auto;
+        display: flex;
+        padding: 50px;
+    }
+    .Scheduleimg img{
+        width: 500px;
+    }
+    .Schedule{
+        padding-left: 20px;
+        padding-top: 50px;
+    }
+    .ScheduleTitle{
+        color: #141264;
+        font-size: 25px;
+        font-weight: bold;
+    }
+    .Schedule p{
+        line-height: 20px;
+        margin-top: 15px;
+    }
+    .Schedule button{
+        margin-top: 15px;
+        color: white;
+        background-color: #f60;
+        font-size: 20px;
+        font-weight: bolder;
+        height: 50px;
+        width: 40%;
+        border: 0px;
+    }
+    /* FOOTER */
+    .footerclass{
+        background-color: #050505;
+        width: 100%;
+    }
+    .footerstart{
+        width: 1170px;
+        margin: auto;
+        display: flex;
+        padding: 50px;
+        align-items: center;
+        display-content: space-between;
+        height: 300px;
+    }
+    .footerstart1{
+        width: 600px;
+    }
+    .footerstart1 img{
+        width: 300px;
+    }
+    .footertitle{
+        font-size: 25px;
+        color: white;
+        line-height: 25px;
+        text-align: center;
+    }
+    .footerText{
+        font-size: 15px;
+        color: white;
+        line-height: 25px;
+        margin: 20px;
+        text-align: center;
+        font-weight: bold;
+    }
+    .footerImg{
+        margin: 25px;
+        text-align: center;
+    }
+    .footerImg img{
+        width: 45%;
+    }
+    .footerright{
+        padding-left: 10px;
+        text-align: center;
+        width: 500px;
+    }
+    .footerphone{
+        font-size: 20px;
+        color: white;
+    }
+    .footerAddress{
+        font-size: 15px;
+        color: white;
+        line-height: 25px;
+    }
+    .footerAddress span{
+        font-weight: bold;
+    }
+    .footermain{
+        margin: auto;
+        width: 1170px;
+    }
+    .footermain p{
+        font-size: 15px;
+        color: white;
+        line-height: 25px;
+        text-align: center;
+    }
+</style>
+<body>
+    <nav>
+        <div class="navbar">
+            <div class="logo">
+                <a href="homepage.html"><img src="Logo.png" class="img-fluid"></a>
+            </div>
+            <div class="navitems">
+                <ul class="nav">
+                    <li><a href="#"><b>Overview</b></a></li>
+                    <li><a href="#"><b>Project Highlights</b></a></li>
+                    <li><a href="#"><b>Site Plan</b></a></li>
+                    <li><a href="#"><b>Location</b></a></li>
+                    <li><a href="#"><b>Price List</b></a></li>
+                    <li><a href="#"><b>Gallery</b></a></li>
+                    <li><a href="#"><b>Contact Us</b></a></li>
+                    <li><button value="BOOK ONLINE" class="btn1"><b>BOOK ONLINE</b></button></li>
+                    <li><a href="#"><b>9896216660</b></a></li>
+                </ul>
+            </div>
+        </div>
+        <img src="rera.jpg" class="imgblock">
+        <!-- For Site Visit -->
+        <div class="sitevisit">
+            <div class="visittext">
+                <h4>ARE YOU INTERESTED IN FREE SITE VISIT</h4>
+                <div class="siteform">
+                    <input type="text" id="name" placeholder="YOUR NAME">
+                    <input type="email" name="email" id="mail" placeholder="YOUR EMAIL">
+                    <input type="text" name="phone" id="contact" placeholder="YOUR PHONE">
+                    <button value="BOOK A FREE SITE VISIT" class="btnsite"><b>BOOK A FREE SITE VISIT</b></button>
+                </div>
+            </div>
+        </div>
+        <div class="whyus">
+            <div class="usonly">
+                <h4 class="whyhut">WHY LOG HUT?</h4>
+                <p>Your Dream Home Awaits you to Own Exquisite Site in the LOG HUT.</p>
+            </div>
+            <div class="whylog">
+                <img src="tiles.png">
+                <img src="bank_project.png" alt="">
+                <img src="construct.png" alt="">
+            </div>
+        </div>
+        <div class="myplans">
+            <div class="planpic">
+                <img src="plans.jpeg">
+            </div>
+            <div class="projectover">
+                <h2>PROJECT OVERVIEW</h2>
+                <p class="p1">Everything one can find in terms of comfort and convenience is what you can expect at this prestigious project. To achieve this, LOG HUT Mohali,Near Aerocity Mohali Plots an array of unparalleled facilities that ooze out comfort and conveniences that smack luxury to give life a new direction to effortless living.</p><br>
+
+                <p class="p2">Everything one can find in terms of comfort and convenience is what you can expect at this prestigious project. To achieve this, LOG HUT Mohali,Near Aerocity Mohali Plots an array of unparalleled facilities that ooze out comfort and conveniences that smack luxury to give life a new direction to effortless living.</p><br>
+                    
+                <p class="p3">Everything one can find in terms of comfort and convenience is what you can expect at this prestigious project. To achieve this, LOG HUT Mohali,Near Aerocity Mohali Plots an array of unparalleled facilities that ooze out comfort and conveniences that smack luxury to give life a new direction to effortless living.</p><br>
+                    
+                <p class="p4">Everything one can find in terms of comfort and convenience is what you can expect at this prestigious project. To achieve this, LOG HUT Mohali,Near Aerocity Mohali Plots an array of unparalleled facilities that ooze out comfort and conveniences that smack luxury to give life a new direction to effortless living.</p><br>
+                <button value="BOOK A FREE SITE VISIT" class="btnplan"><b>BOOK NOW</b></button>
+            </div>
+        </div>
+        
+        <div class="aboutlog">
+            <div class="forsecurity">
+                <div class="for1rowcol">
+                    <div class="forimage"><img src="security.png"></div>
+                    <div class="forcontent">24X7 SECURITY</div>
+                </div>
+                <div class="for1rowcol">
+                    <div class="forimage"><img src="educational_Soc.png"></div>
+                    <div class="forcontent">CLOSE TO EDUCATIONAL INSTITUTIONS</div>
+                </div>
+                <div class="for1rowcol">
+                    <div class="forimage"><img src="kidsPlay.png"></div>
+                    <div class="forcontent">KIDS PLAY AREA</div>
+                </div>
+                <div class="for1rowcol">
+                    <div class="forimage"><img src="city_mohali.png"></div>
+                    <div class="forcontent">NEAR AERO CITY & IT CITY MOHALI</div>
+                </div>
+            </div>
+            <div class="forsecurity">
+                <img src="parents.png" class="middleimg">
+            </div>
+            <div class="forsecurity">
+                <div class="for1rowcol">
+                    <div class="forimage"><img src="acers.png"></div>
+                    <div class="forcontent">PART OF 25 ACRES TOWNSHIP</div>
+                </div>
+                <div class="for1rowcol">
+                    <div class="forimage"><img src="residences.png" alt=""></div>
+                    <div class="forcontent">400+ RESIDENCES</div>
+                </div>
+                <div class="for1rowcol">
+                    <div class="forimage"><img src="road_rail.png" alt=""></div>
+                    <div class="forcontent">WELL-CONNECTED BY ROAD & RAIL</div>
+                </div>
+                <div class="for1rowcol">
+                    <div class="forimage"><img src="plantations.png" alt=""></div>
+                    <div class="forcontent">AVENUE PLANTATIONS</div>
+                </div>
+            </div>
+        </div>
+        <!-- PBRERA-SAS81-PR0693 -->
+        <div class="pbrerarow">
+            <div class="pbrera1row">
+                <div class="pbrowmain">
+                    PBRERA-SAS81-PR0693
+                </div>
+                <hr>
+                <div class="pbreraText1">
+                    Bring your dream home to life at SmartCity, a project that has the best gated community plots in Mohali. Perfectly located, thoughtfully developed, and the best value for money property of sale near AeroCity Mohali, are the highlights of this stellar project.<br><br>
+                    With a host of amenities like compound walls, street lighting, independent drinking water connections, and children’s park to name a few, SmartCity is the ideal space to build a home that nourishes your family and bring prosperity to your life.
+                </div>
+                <div class="pbreraplotno">
+                    Registry Ready Plots Rera No - PBRERA-SAS81-PR0693
+                </div>
+                <div class="pbreraImages">
+                    <div class="pbrera1img">
+                        <div class="reraimg1"><img src="plot.png"></div>
+                        <div class="pbreraText">446</div>
+                        <div class="reraimg1">PLOTS</div>
+                    </div>
+                    <div class="pbrera1img">
+                        <div class="reraimg1"><img src="acres.png"></div>
+                        <div class="pbreraText">22</div>
+                        <div class="reraimg1">ACRES</div>
+                    </div>
+                    <div class="pbrera1img">
+                        <div class="reraimg1"><img src="aminites.png"><div>
+                        <div class="pbreraText">20</div>
+                        <div class="reraimg1">LIFESTYLE AMENITIES</div>
+                    </div>
+                    <div class="pbrera1img">
+                        <div class="reraimg1"><img src="lakh.png"></div>
+                        <div class="pbreraText">20</div>
+                        <div class="reraimg1">LAKHS*</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="hr1">
+        <div class="maintable">
+            <div class="secondrow">
+                LOG HUT PLOTS NEAR AERO CITY MOHALI– LANDRAN-BANUR ROAD
+                <br>
+                Register To Unlock Special Offer Prices Now
+            </div>
+            <div class="tablefirstrow">
+                <div class="tablesecondrow">
+                    <div class="plotsizeprice">
+                        Plot Size
+                    </div>
+                    <div class="plotsizeprice">
+                        Price
+                    </div>
+                </div>
+                <div class="forplotsize">
+                    <div class="plotsizeprice">
+                        100 Sq.Yards
+                    </div>
+                    <div class="plotsizeprice">
+                        <img src="unlock_price.png " alt="">
+                    </div>
+                </div>
+                <div class="forplotsize">
+                    <div class="plotsizeprice">
+                        100 Sq.Yards
+                    </div>
+                    <div class="plotsizeprice">
+                        <img src="unlock_price.png " alt="">
+                    </div>
+                </div>
+                <div class="forplotsize">
+                    <div class="plotsizeprice">
+                        100 Sq.Yards
+                    </div>
+                    <div class="plotsizeprice">
+                        <img src="unlock_price.png " alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- IMAGE AFTER IT -->
+        <div class="imgAfterTable">
+            <img src="plotsize.png">
+        </div>
+        <hr size="1" class="hr_first" width="90%">
+        <div class="imgGal">
+            <div class="img1">
+                <img src="31-RERA-Approved.png" class="imgblk1"><br>
+                <p align="center" class="ptag1">RERA Approved</p>
+            </div><br>
+            
+            <div class="img1">
+                <img src="wide_road.png" class="imgblk1"><br>
+                <p align="center" class="ptag1">Direct Entry From 200 ft wide Road</p>
+            </div>
+            
+            <div class="img1">
+                <img src="airport.png" class="imgblk1"><br>
+                <p align="center" class="ptag1">International Airport Just 10 Minutes Drive</p>
+            </div>
+        </div>
+        <div class="imgGal">
+            <div class="img1">
+                <img src="IT Sector.png" class="imgblk1"><br>
+                <p align="center" class="ptag1">IT Sector Just 10 Minutes Drive</p>
+            </div><br>
+            
+            <div class="img1">
+                <img src="Tepla.png" class="imgblk1"><br>
+                <p align="center" class="ptag1">Tepla Industrial Zone Just 10 Minutes Drive</p>
+            </div>
+            
+            <div class="img1">
+                <img src="Educational.png" class="imgblk1"><br>
+                <p align="center" class="ptag1">Educational Institution Just 1 Minutes Drive</p>
+            </div>
+        </div>
+        <div class="imgGal">
+            <div class="img1">
+                <img src="GreenPark.png" class="imgblk1"><br>
+                <p align="center" class="ptag1">Green Parkland in 3 Acres</p>
+            </div><br>
+            
+            <div class="img1">
+                <img src="Concrete.png" class="imgblk1"><br>
+                <p align="center" class="ptag1">Min. 30 Ft. Wide RCC Concrete Roads</p>
+            </div>
+            
+            <div class="img1">
+                <img src="Community.png" class="imgblk1"><br>
+                <p align="center" class="ptag1">Biggest Community Centre</p>
+            </div>
+        </div>
+        <div class="imgGal">
+            <div class="img1">
+                <img src="Walking.png" class="imgblk1"><br>
+                <p align="center" class="ptag1">Walking Track</p>
+            </div><br>
+            
+            <div class="img1">
+                <img src="PlayArea.png" class="imgblk1"><br>
+                <p align="center" class="ptag1">Kids Play Area & Swings</p>
+            </div>
+            
+            <div class="img1">
+                <img src="OpenGym.png" class="imgblk1"><br>
+                <p align="center" class="ptag1">Open Gym</p>
+            </div>
+        </div>
+        <!-- EXPERIENCE THE LOCATION OF LOG HUT PROJECT -->
+        <div class="mainExperience">
+            <div class="experienceTitle">
+                EXPERIENCE THE LOCATION OF LOG HUT PROJECT
+            </div>
+            <div class="experienceText">
+                Checkout the videos to know more about the 22 Acres Plotted Development & Prime Location Advantages it has to offer.
+            </div>
+            <div class="experienceTitle1">
+                LAYOUT PLAN
+            </div>
+            <div class="experienceText">
+                Your Dream Home Awaits you to Own Exquisite Site in the LOG HUT.
+            </div>
+            <div class="experienceText">
+                <img src="layout_map.jpg">
+            </div>
+        </div>
+        <!-- LAYOUT PLAN AND BROCHURE -->
+        <div class="mainclassLayout">
+            <button class="downloadBrochure">Download Brochure</button>
+            <div class="experienceTitle1">
+                LAYOUT PLAN
+            </div>
+            <div class="experienceText">
+                Your Dream Home Awaits you to Own Exquisite Site in the LOG HUT.
+            </div>
+            <img src="layout_plan.jpg">
+        </div>
+        <div class="locationmaap">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3435.2591693360087!2d76.71353581480084!3d30.57022838169411!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fc33f33088f15%3A0xf22939ccde55bb20!2sSmart% 20city%20mohali!5e0!3m2!1sen!2sin!4v1667442741307!5m2!1sen!2sin" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>  
+        </div>
+        <div class="landmarks">
+            <div class="experienceTitle1">
+                IMPORTANT LANDMARKS
+                <hr>
+            </div>
+            <div class="marquee_main">
+                <div class="marquee_row">
+                    <div class="marquee_col">
+                        KEY LOCATIONS
+                    </div>
+                    <div class="marquee_col1">
+                        <img src="plus.png" alt="">
+                    </div>
+                </div>
+                <div class="marquee_row">
+                    <div class="marquee_col">
+                        SCHOOL
+                    </div>
+                    <div class="marquee_col2">
+                        <img src="plus.png" alt="">
+                    </div>
+                </div>
+                <div class="marquee_row">
+                    <div class="marquee_col">
+                        HOSPITALS
+                    </div>
+                    <div class="marquee_col3">
+                        <img src="plus.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- For AMENITIES -->
+        <div class="mainAminites">
+            <div class="experienceTitle1">
+                AMENITIES
+            </div>
+            <div class="experienceText">
+                Your Dream Home Awaits you to Own Exquisite Site in the LOG HUT Mohali Project.
+            </div>
+            <div class="aminitesTable">
+                <div class="aminitesDrive">
+                    <img src="industry.png" alt="">
+                    <p>20 Minutes Drive Tepla Industrial Zone</p>
+                </div>
+                <div class="aminitesDrive">
+                    <img src="ambala.png" alt="">
+                    <p>30 Minutes Drive Ambala</p>
+                </div>
+                <div class="aminitesDrive">
+                    <img src="amity_university.png" alt="">
+                    <p>5 Minutes Drive Amity University</p>
+                </div>
+                <div class="aminitesDrive">
+                    <img src="banur.png" alt="">
+                    <p>5 Minutes Drive Banur</p>
+                </div>
+                <div class="aminitesDrive">
+                    <img src="minutes_drive.png" alt="">
+                    <p>10 Minutes Drive</p>
+                </div>
+            </div>
+        </div>
+        <!-- FAQs -->
+        <div class="faqs">
+            <div class="experienceTitle1">
+                FAQS
+            </div>
+            <div class="experienceText">
+                Your Dream Home Awaits you to Own Exquisite Site in the LOG HUTCity Mohali Project.
+            </div>
+            <div class="mainFaqs">
+                <div class="rowFaqs">
+                    <div class="titleFaqs">
+                        Where is Log Hut Model Town located?
+                    </div>
+                </div>
+                <img src="plus.png" alt="">
+            </div>
+        </div>
+        <!-- For Project Gallery -->
+        <div class="projectGal" align="center">
+            <h2>PROJECT GALLERY</h2>
+        </div>
+        
+        <div class="proGal">
+            <div class="src1">
+                <img src="p1.jpeg" class="pro1"><br>
+            </div>
+            
+            <div class="src1">
+                <img src="p2.jpeg" class="pro1"><br>
+            </div>
+            
+            <div class="src1">
+                <img src="p3.jpeg" class="pro1"><br>
+            </div>
+            <div class="src1">
+                <img src="p4.jpeg" class="pro1"><br>
+            </div>
+        </div>
+        <div class="proGal">
+            <div class="src1">
+                <img src="p5.jpeg" class="pro1"><br>
+            </div><br>
+            
+            <div class="src1">
+                <img src="p6.jpeg" class="pro1"><br>
+            </div>
+            
+            <div class="src1">
+                <img src="p7.jpeg" class="pro1"><br>
+            </div>
+            <div class="src1">
+                <img src="p8.jpeg" class="pro1"><br>
+            </div>
+        </div>
+        <div class="proGal">
+            <div class="src1">
+                <img src="p9.jpeg" class="pro1"><br>
+            </div>
+        </div>
+        <!-- HOME LOAN SECTION -->
+        <div class="myloan" align="center">
+            <h2 class="homeloan">HOME LOAN FACILITY</h2>
+            <p align="center">Your Dream Home Awaits you to Own Exquisite Site in the LOG HUT Mohali Project</p>
+        </div>
+        <div class="myloanpanel">
+            
+            <img class="bankimg" src="icici.jpg">
+        
+        
+            <img class="bankimg" src="axis.jpg">
+        
+        
+            <img class="bankimg" src="lic.jpg">
+        
+        
+            <img class="bankimg" src="idfc.jpg">
+        
+            <img class="bankimg" src="hdfc.jpg">
+        
+        
+            <img class="bankimg" src="sbi.jpg">
+            
+        </div>
+        <!-- SCHEDULE YOUR SITE VISIT -->
+        <div class="mainSchedule">
+            <div class="Schedulerow1">
+                <div class="Scheduleimg">
+                    <img src="schedule_site.png">
+                </div>
+                <div class="Schedule">
+                    <div class="ScheduleTitle">
+                        SCHEDULE YOUR SITE VISIT
+                    </div>
+                    <p>If you are interested in a site visit, please contact us immediately or visit us at the following link to get assistance from our executives and learn more about our project and the benefits you will receive here with us.</p>
+                    <button>Make A Call</button> <button>Download Brochure</button>
+                </div>
+            </div>
+        </div>
+        <div class="footerclass">
+            <div class="footerstart">
+                <div class="footerstart1">
+                    <div class="footertitle">
+                        SPECIAL LAUNCH OFFERS ON LIMITED INVENTORY
+                    </div>
+                    <div class="footerText">
+                        Sales & Marketing Partner
+                    </div>
+                    <div class="footerImg">
+                        <img src="realty_nivesh.png" alt="">
+                    </div>
+                </div>
+                <div class="footerright">
+                    <div class="footerphone">
+                        Phone:     9896216660 | 9896216660
+                    </div>
+                    <div class="footerAddress">
+                        <span>Site Address:</span> <br>
+                        NH-205A, Banur-Landran Road, <br>
+                        Adj. SUS Tangori Collage, Near Upcoming <br>
+                        Aerocity Extension, Mohali <br>
+                    </div>
+                </div>
+            </div>
+            <div class="footermain">
+                <hr>
+                <p>Copyright © 2022 - Smartcity. All Rights Reserved.</p>
+                <p>Terms & Conditions | Privacy Policy</p>
+                <br>
+            </div>
+        </div>
+    </nav>
+</body>
+</html>
